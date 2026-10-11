@@ -40,7 +40,7 @@ describe Mux do
       context.response.print "Hello bar, got #{context.request.path} .. #{context.request.path_param(:id)}!"
 
       context.request.path_param(:id).should eq "123"
-      context.request.path_param?(:foo).should eq nil
+      context.request.path_param?(:foo).should be_nil
     end
 
     body = test_request(mux, "GET", "/foo/123")
