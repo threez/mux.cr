@@ -58,20 +58,20 @@ module Mux
     end
 
     {% for method in ["get", "head", "post", "put", "delete", "connect", "options", "trace", "patch"] %}
-      # add HTTP {{method.id}} handler using a hanlder class
+      # add HTTP {{ method.id }} handler using a hanlder class
       #
       # * `path` the path to register the handler under
       # * `handler` the handler to register at the given path
-      def {{method.id}}(path, handler : HTTP::Handler)
-        add_handler(path, handler, method: {{method}})
+      def {{ method.id }}(path, handler : HTTP::Handler)
+        add_handler(path, handler, method: {{ method }})
       end
 
-      # add HTTP {{method.id}} handler using a handler proc
+      # add HTTP {{ method.id }} handler using a handler proc
       #
       # * `path` the path to register the handler under
       # * `handler` the handler to register at the given path
-      def {{method.id}}(path, &handler : HandlerProc)
-      add_handler(path, method: {{method}}, &handler)
+      def {{ method.id }}(path, &handler : HandlerProc)
+      add_handler(path, method: {{ method }}, &handler)
       end
     {% end %}
 
