@@ -17,7 +17,7 @@ require "radix"
 #
 # The implementation is based on the `luislavena/radix` shard.
 module Mux
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
 
   # The router usually passed as an argument to `HTTP::Server.new`.
   class Router

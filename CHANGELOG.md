@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-11
+
 ### Changed
 
 - Upgraded `ameba` dev dependency from `~> 1.0.0` to `~> 1.7.0` and fixed all
